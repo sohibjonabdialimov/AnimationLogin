@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form>
+        <div class="user-box">
+          <input type="text" required id="username">
+          <label for="username">Username</label>
+        </div>
+        <div class="user-box">
+          <input class="pass" type="password" name="password" id="password" required>
+          <label for="password">Password</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="passwordShow" class="show">
+          <label for="passwordShow">Show</label>
+        </div>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Login
+        </a>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const show = document.querySelector(".show");
+    const pass = document.querySelector(".pass");
+    show.addEventListener("click",()=>{
+      if(show.checked){
+        pass.setAttribute("type","text");
+      }else{
+        pass.setAttribute("type","password");
+      }
+    })
+  </script>
+</body>
+
+</html>
